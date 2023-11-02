@@ -1,0 +1,33 @@
+System.Exception
+  HResult=0x80131500
+  Message=A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+
+select * from Categories
+  Source=PayamHannan.Arian.ORM
+  StackTrace:
+   at PayamHannan.Arian.ORM.ConnectionManager.ExecuteQueryHandler.HandleQueryException(Exception exception) in D:\WORK\_Payam\Projects\git\PayamHannan.Arian.ORM\ConnectionManager\ExecuteQueryHandler.cs:line 96
+   at PayamHannan.Arian.ORM.ConnectionManager.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) in D:\WORK\_Payam\Projects\git\PayamHannan.Arian.ORM\ConnectionManager\ExecuteQueryHandler.cs:line 31
+   at PayamHannan.Arian.ORM.ConnectionManager.DbCommand.QueryMany[TEntity,TList](Action`2 customMapper) in D:\WORK\_Payam\Projects\git\PayamHannan.Arian.ORM\ConnectionManager\DbCommand.cs:line 224
+   at PayamHannan.Arian.ORM.ConnectionManager.DbCommand.QueryMany[TEntity](Action`2 customMapper) in D:\WORK\_Payam\Projects\git\PayamHannan.Arian.ORM\ConnectionManager\DbCommand.cs:line 235
+   at PayamHannan.Arian.ORM.ConnectionManager.SelectBuilder`1.QueryMany(Action`2 customMapper) in D:\WORK\_Payam\Projects\git\PayamHannan.Arian.ORM\ConnectionManager\SelectBuilder`1.cs:line 207
+   at Arian.NorthW.WindowsFormsApp1.REPO.CatRepo.Get() in D:\WORK\_Compuco\NW.ORM.WindowsFormsApp1\NW.ORM.WindowsFormsApp1\REPO\CatRepo.cs:line 16
+   at NW.ORM.WindowsFormsApp1.Form1.Form1_Load(Object sender, EventArgs e) in D:\WORK\_Compuco\NW.ORM.WindowsFormsApp1\NW.ORM.WindowsFormsApp1\Form1.cs:line 23
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+Inner Exception 1:
+SqlException: A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+
+Inner Exception 2:
+Win32Exception: No process is on the other end of the pipe

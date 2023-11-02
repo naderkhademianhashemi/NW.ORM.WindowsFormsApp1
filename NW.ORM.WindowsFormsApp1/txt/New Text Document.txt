@@ -1,0 +1,32 @@
+System.Exception
+  HResult=0x80131500
+  Message=Invalid object name 'Category'.
+
+Select * from Category
+  Source=PayamHannan.Arian.ORM
+  StackTrace:
+   at PayamHannan.Arian.ORM.ConnectionManager.ExecuteQueryHandler.HandleQueryException(Exception exception) in D:\WORK\_Compuco\Arian.NorthW.WindowsFormsApp1\PayamHannan.Arian.ORM\ConnectionManager\ExecuteQueryHandler.cs:line 96
+   at PayamHannan.Arian.ORM.ConnectionManager.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) in D:\WORK\_Compuco\Arian.NorthW.WindowsFormsApp1\PayamHannan.Arian.ORM\ConnectionManager\ExecuteQueryHandler.cs:line 31
+   at PayamHannan.Arian.ORM.ConnectionManager.DbCommand.QuerySingle[TEntity](Action`2 customMapper) in D:\WORK\_Compuco\Arian.NorthW.WindowsFormsApp1\PayamHannan.Arian.ORM\ConnectionManager\DbCommand.cs:line 100
+   at Arian.NorthW.WindowsFormsApp1.Form1.Form1_Load(Object sender, EventArgs e) in D:\WORK\_Compuco\Arian.NorthW.WindowsFormsApp1\Arian.NorthW.WindowsFormsApp1\Form1.cs:line 25
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+  This exception was originally thrown at this call stack:
+    [External Code]
+    PayamHannan.Arian.ORM.ConnectionManager.ExecuteQueryHandler.PrepareDbCommand(bool) in ExecuteQueryHandler.cs
+    PayamHannan.Arian.ORM.ConnectionManager.ExecuteQueryHandler.ExecuteQuery(bool, System.Action) in ExecuteQueryHandler.cs
+
+Inner Exception 1:
+SqlException: Invalid object name 'Category'.
